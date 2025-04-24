@@ -61,7 +61,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration corsConfig = new CorsConfiguration();
-        corsConfig.setAllowedOrigins(List.of("http://localhost:4200")); // Allow requests from Angular app (port 4200)
+        corsConfig.setAllowedOrigins(List.of("http://localhost:4200", "https://auth-angular-kappa.vercel.app")); // Allow requests from Angular app (port 4200)
         corsConfig.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Allowed methods
         corsConfig.setAllowedHeaders(List.of("*")); // Allow all headers
         corsConfig.setAllowCredentials(true);
